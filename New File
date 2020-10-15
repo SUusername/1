@@ -1,0 +1,29 @@
+namespace task2
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            double a = Double.Parse(Console.ReadLine());
+            double b = Double.Parse(Console.ReadLine());
+            double c = Double.Parse(Console.ReadLine());
+            double d = Double.Parse(Console.ReadLine());
+            double f;
+            Random rd = new Random();
+            double x = rd.Next();
+
+            if (Math.Abs(x) < 10)
+            {
+                f = Math.Tanh(x / 21 + a) - Math.Log(Math.Abs(b * 21 + 7));
+
+            }
+            else if (Math.Abs(x) >= 10)
+            { f = c * Math.Pow(x * x + d * Math.Pow(21, 1.2), 1 / 21); }
+            else f = 0;
+
+            Console.WriteLine(f);
+            Console.ReadKey(true);
+
+        }
+    }
+}
